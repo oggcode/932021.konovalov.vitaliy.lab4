@@ -1,0 +1,155 @@
+:root {
+	--green-color: green;
+	--white-color: #edeef0;
+	--grey-blue-color: #e1e5eb;
+	--light-blue-color: #507299;
+	--dark-blue-color: #2e5473;
+	--grey-color: #d0d0d0;
+	--header-height: 45px;
+}
+
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+	box-sizing: border-box;
+}
+
+hr {
+	border: none;
+	background-color: var(--grey-color);
+	height: 3px;
+	margin: 8px 0;
+}
+
+ul, ul li {
+	list-style: none;
+}
+
+html,
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	height: 100%;
+	width: 100%;
+}
+
+.header {
+	background-color: var(--light-blue-color);
+	height: var(--header-height);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+}
+
+li {
+	color: var(--light-blue-color);
+	width: 180px;
+	padding: 8px;
+	cursor: pointer;
+}
+
+.logo {
+	margin-left: 10%;
+}
+
+p {
+	background-color: var(--white-color);
+}
+
+.w-100 {
+	width: 100%;
+}
+
+.container {
+	background-color: var(--white-color);
+	display: flex;
+	justify-content: center;
+	padding-top: calc(var(--header-height) + 15px);
+	width: 100%;
+}
+
+.content-wrapper {
+	display: flex;
+	margin-left: -230px;
+	gap: 15px;
+}
+
+article {
+	width: 450px;
+}
+
+.card {
+	background: white;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+	margin-bottom: 20px;
+	text-align: justify;
+}
+
+.card-footer {
+	display: flex;
+	justify-content: space-between;
+	color: var(--light-blue-color);
+}
+
+.aside {
+	position: fixed;
+	right: 17%;
+	width: 170px;
+}
+
+.aside-card {
+	border: 15px solid white;
+	border-radius: 5px;
+	background-color: white;
+	margin-bottom: 20px;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.5)
+}
+
+footer {
+	line-height: 30px;
+	color: gray;
+	background-color: white;
+	text-align: center;
+}
+
+li:hover {
+	background-color: var(--grey-blue-color);
+}
+
+::selection {
+	color: var(--green-color);
+	background-color: #e0e4ea;
+}
+
+@media(max-width: 1220px) {
+	.aside {
+		display: none;
+	}
+}
+
+@media(max-width: 970px) {
+	.content-wrapper {
+		flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+		gap: 0;
+	}
+
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-bottom: 40px;
+		width: 480px;
+	}
+
+	li {
+		width: auto;
+		margin: 0 10px;
+	}
+}
